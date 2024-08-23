@@ -14,6 +14,9 @@ import TheWelcome from './components/TheWelcome.vue'
 
   <main>
     <TheWelcome />
+    <iframe
+      src="https://chat.cpii.ai/embed?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY5NDk0M2U5MzYzOWFiMzNkZjA4M2Y5IiwicHJvamVjdF9pZCI6IjY2OTVjZWZhOTM2MzlhYjMzZGYwOGRiOCIsImV4cCI6MTcyNDkyNzI3OX0.0yZPRHjF8PKk0Zp_K8_uj20TOcc4P5qkNVdWvxLHxEc&name=CPII ChatBot" width="100%">
+    </iframe>
   </main>
 </template>
 
