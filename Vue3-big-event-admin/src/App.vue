@@ -1,9 +1,32 @@
-<script setup></script>
+<script setup>
+import { useRoute, useRouter } from 'vue-router'
+import { useUserStore } from '@/stores/user'
+const router = useRouter()
+const route = useRoute()
+
+const goList = () => {
+  router.push('/list')
+  console.log(router, route)
+}
+
+const userStore = useUserStore()
+</script>
 
 <template>
   <div>
     I am App
-    <el-button>Primary</el-button>
+    <test-demo></test-demo>
+    <el-button @click="$router.push('/home')">Jump to home page</el-button>
+    <el-button @click="goList">Jump to list page</el-button>
+
+    <el-button type="primary">Primary</el-button>
+    <el-button type="success">Success</el-button>
+
+    <p>{{ userStore.token }}</p>
+    <el-button @click="userStore.setToken('Bearer sidfhheiwhuvyweqrjh')">
+      Log in
+    </el-button>
+    <el-button @click="userStore.removeToken()">quit</el-button>
   </div>
 </template>
 
