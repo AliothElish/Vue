@@ -1,1 +1,1 @@
-<template></template>
+<template>Article Manage</template>

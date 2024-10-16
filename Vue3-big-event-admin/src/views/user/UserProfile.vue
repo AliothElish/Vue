@@ -1,1 +1,1 @@
-<template>user profile</template>
+<template>User Profile</template>

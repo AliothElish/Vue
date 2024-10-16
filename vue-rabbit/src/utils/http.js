@@ -6,15 +6,15 @@ const httpInstance = axios.create({
 })
 
 httpInstance.interceptors.request.use(
-  (config) => {
+  config => {
     return config
   },
-  (e) => Promise.reject(e)
+  e => Promise.reject(e)
 )
 
 httpInstance.interceptors.response.use(
-  (res) => res.data,
-  (e) => {
+  res => res.data,
+  e => {
     return Promise.reject(e)
   }
 )

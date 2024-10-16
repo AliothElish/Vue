@@ -10,25 +10,25 @@ const instance = axios.create({
 })
 
 instance.interceptors.request.use(
-  (config) => {
+  config => {
     const useStore = useUserStore()
     if (useStore.token) {
       config.headers.Authorization = useStore.token
     }
     return config
   },
-  (err) => Promise.reject(err)
+  err => Promise.reject(err)
 )
 
 instance.interceptors.response.use(
-  (res) => {
+  res => {
     if (res.data.code === 0) {
       return res
     }
     ElMessage.error(res.data.message || 'Service Abnormality')
     return Promise.reject(res.data)
   },
-  (err) => {
+  err => {
     if (err.response?.status === 401) {
       router.push('/login')
     }

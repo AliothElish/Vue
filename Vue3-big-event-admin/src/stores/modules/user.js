@@ -5,7 +5,7 @@ export const useUserStore = defineStore(
   'big-user',
   () => {
     const token = ref('')
-    const setToken = (newToken) => {
+    const setToken = newToken => {
       token.value = newToken
     }
     const removeToken = () => {
