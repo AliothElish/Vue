@@ -1,24 +1,24 @@
-/* Just rewrite what you need */
+/* 只需要重写你需要的即可 */
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
     'primary': (
-      // Primary Color
+      // 主色
       'base': #27ba9b,
     ),
     'success': (
-      // Success Color
+      // 成功色
       'base': #1dc779,
     ),
     'warning': (
-      // Warning Color
+      // 警告色
       'base': #ffb302,
     ),
     'danger': (
-      // Danger Color
+      // 危险色
       'base': #e26237,
     ),
     'error': (
-      // Error Color
+      // 错误色
       'base': #cf4444,
     ),
   )
